@@ -5,6 +5,11 @@ on_i = 1
 merged = '0'
 hook_source = 'call coil398#init#coc#hook_source()'
 
+# json, html, css, typescript, angular, phpの拡張を自動的にインストール
+hook_add = '''
+  let g:coc_global_extensions = ['coc-json', 'coc-html', 'coc-css', 'coc-tsserver', 'coc-angular', 'coc-phpls']
+'''
+
 [[plugins]] # ディレクトリツリーの表示
 repo = 'scrooloose/nerdtree'
 hook_add = '''
@@ -62,4 +67,11 @@ hook_add = '''
   let g:airline#extensions#ale#warning_symbol = ' '
   let g:airline#extensions#default#section_truncate_width = {}
   let g:airline#extensions#whitespace#enabled = 1
+'''
+
+[[plugins]] # クローズタグの自動入力
+repo = "alvan/vim-closetag"
+on_ft = ['html']
+hook_add = '''
+  let g:closetag_filenames = '*.html'
 '''
