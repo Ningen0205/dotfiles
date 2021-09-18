@@ -36,6 +36,8 @@ set wildmode=longest,full
 set guifont=HackGenNerd\ 14
 
 
+let mapleader = "\<Space>"
+
 " ---------- dain.vim setting ---------------
 
 

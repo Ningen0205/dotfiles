@@ -14,7 +14,11 @@ hook_add = '''
 repo = 'scrooloose/nerdtree'
 hook_add = '''
   let NERDTreeShowHidden=1
-    nnoremap <silent><C-a> :NERDTreeToggle<CR>:vertical res 30<CR>
+
+  nnoremap <leader>n :NERDTreeFocus<CR>
+  " nnoremap <C-n> :NERDTree<CR>
+  nnoremap <C-t> :NERDTreeToggle<CR>
+  nnoremap <C-f> :NERDTreeFind<CR>
 '''
 
 [[plugins]] # ディレクトリツリーにアイコンを追加
@@ -74,4 +78,14 @@ repo = "alvan/vim-closetag"
 on_ft = ['html']
 hook_add = '''
   let g:closetag_filenames = '*.html'
+'''
+
+[[plugins]] # 自作のチートシートを表示
+repo = "reireias/vim-cheatsheet"
+hook_add = '''
+  let g:cheatsheet#cheat_file = '~/.cheatsheet.md'
+  
+  let g:cheatsheet#float_window = 1
+  let g:cheatsheet#float_window_width_ratio = 0.6
+  let g:cheatsheet#float_window_height_ratio = 0.6
 '''
