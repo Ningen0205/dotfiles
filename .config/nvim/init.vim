@@ -38,6 +38,20 @@ set guifont=HackGenNerd\ 14
 
 let mapleader = "\<Space>"
 
+" :terminalで起動するシェルをpowershellに変更
+set sh=powershell.exe
+
+" ESCでターミナルモードからノーマルモードへ
+tnoremap <Esc> <C-\><C-n>
+
+" Space t でターミナル起動
+nnoremap <silent> <Leader>t :terminal<CR>
+
+" ターミナル起動中にSpace+tでquit
+tnoremap <silent> <Leader>t <C-\><C-n>:q<CR>
+
+" ターミナル起動時は自動的にインサートモードにする
+autocmd TermOpen * startinsert
 " ---------- dain.vim setting ---------------
 
 
